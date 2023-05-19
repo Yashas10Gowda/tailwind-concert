@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./src/output.css" rel="stylesheet" />
+    <title>Tailwind Concert</title>
     <script defer src="./src/assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./src/assets/fontawesome/js/fontawesome.min.js"></script>
     <script>
@@ -20,14 +21,31 @@
             }
           });
         });
+
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+        darkModeToggle.addEventListener("click", () => {
+          if (document.body.classList.contains("dark")) {
+            document.body.classList.remove("dark");
+          } else {
+            document.body.classList.add("dark");
+          }
+        });
       };
     </script>
   </head>
-  <body>
-    <main>
+  <body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
       <header class="text-zinc-200">
+        <div
+          id="dark-mode-toggle"
+          class="fixed right-0 top-24 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900"
+        >
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline-block"></i>
+        </div>
         <nav
-          class="sticky top-0 flex select-none bg-gradient-to-r from-rose-500 to-pink-500 z-10"
+          class="sticky top-0 z-10 flex select-none bg-gradient-to-r from-rose-500 to-pink-500"
         >
           <div class="flex cursor-pointer items-center gap-2 p-2">
             <img src="./src/assets/images/logo-inverted.png" width="50" />
@@ -35,7 +53,7 @@
               tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
-          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+          <div class="my-auto ml-auto block pr-4 md:hidden">
             <div id="mobile-nav-button" class="group peer">
               <div
                 class="relative top-0 mb-1 h-1 w-8 rotate-0 rounded-full bg-zinc-200 transition-all ease-linear group-open:top-1 group-open:rotate-45"
@@ -48,7 +66,7 @@
               ></div>
             </div>
             <div
-              class="absolute left-0 top-[62px] hidden w-full bg-pink-500 bg-rose-500 bg-gradient-to-r peer-open:block"
+              class="to-bg-pink-500 from-bg-rose-500 absolute left-0 top-[62px] hidden w-full bg-gradient-to-r peer-open:block"
             >
               <div
                 class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/5 hover:text-zinc-200"
@@ -123,15 +141,25 @@
           >
             <div class="relative">
               <img src="./src/assets/images/logo.png" width="175" />
-              <div class="flex items-center justify-center mt-[-70px] mb-5">
+              <div class="mb-5 mt-[-70px] flex items-center justify-center">
                 <div
-                  class="flex h-14 w-14 items-center justify-center rounded-full bg-pink-500 gap-1"
+                  class="flex h-14 w-14 items-center justify-center gap-1 rounded-full bg-pink-500"
                 >
-                  <div class="h-2 w-1 bg-pink-300 rounded-full animate-wavey animation-delay"></div>
-                  <div class="h-3 w-1 bg-pink-200 rounded-full animate-wavey animation-delay-[200ms]"></div>
-                  <div class="h-4 w-1 bg-pink-100 rounded-full animate-wavey animation-delay-[150ms]"></div>
-                  <div class="h-3 w-1 bg-pink-200 rounded-full animate-wavey animation-delay-[300ms]"></div>
-                  <div class="h-2 w-1 bg-pink-300 rounded-full animate-wavey animation-delay-[75ms]"></div>
+                  <div
+                    class="animation-delay h-2 w-1 animate-wavey rounded-full bg-pink-300"
+                  ></div>
+                  <div
+                    class="h-3 w-1 animate-wavey rounded-full bg-pink-200 animation-delay-[200ms]"
+                  ></div>
+                  <div
+                    class="h-4 w-1 animate-wavey rounded-full bg-pink-100 animation-delay-[150ms]"
+                  ></div>
+                  <div
+                    class="h-3 w-1 animate-wavey rounded-full bg-pink-200 animation-delay-[300ms]"
+                  ></div>
+                  <div
+                    class="h-2 w-1 animate-wavey rounded-full bg-pink-300 animation-delay-[75ms]"
+                  ></div>
                 </div>
               </div>
               <div class="text-5xl font-bold">
@@ -156,6 +184,74 @@
           </div>
         </div>
       </header>
+      <div
+        class="mx-auto mt-20 max-w-screen-lg text-zinc-900 dark:text-zinc-200"
+      >
+        <h2 class="text-5xl">Headliners</h2>
+        <p>
+          Experience the sonic delight from these made-up artists across 7 days
+          that music fans are calling "one of the many gigs that will happen
+          this year".
+        </p>
+        <div class="mt-4 flex w-full snap-x gap-4 overflow-x-auto pb-5">
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band1.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band2.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band3.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band4.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band5.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band6.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div
+              style="background-image: url(./src/assets/images/band7.jpg)"
+              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+            ></div>
+            <h5 class="mt-5">Corduroy Gary</h5>
+            <h6>1st July 9PM - Main Stage</h6>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
