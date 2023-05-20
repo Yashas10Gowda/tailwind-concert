@@ -39,7 +39,7 @@
       <header class="text-zinc-200">
         <div
           id="dark-mode-toggle"
-          class="fixed right-0 top-24 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900 select-none"
+          class="fixed right-0 top-24 z-10 inline-block w-12 cursor-pointer select-none rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900"
         >
           <i class="fa-solid fa-sun dark:hidden"></i>
           <i class="fa-solid fa-moon hidden dark:inline-block"></i>
@@ -185,38 +185,40 @@
         </div>
       </header>
       <div
-        class="mx-auto mt-20 max-w-screen-lg text-zinc-900 dark:text-zinc-200"
+        class="mx-auto mt-20 max-w-screen-lg p-3 text-zinc-900 dark:text-zinc-200"
       >
         <h2 class="text-5xl">Headliners</h2>
-        <p>
+        <p class="mt-4">
           Experience the sonic delight from these made-up artists across 7 days
           that music fans are calling "one of the many gigs that will happen
           this year".
         </p>
-        <div class="mt-4 flex w-full snap-x gap-4 overflow-x-auto pb-5 select-none">
+        <div
+          class="mt-4 flex w-full select-none snap-x gap-4 overflow-x-auto pb-5"
+        >
           <div class="min-w-[80%] md:min-w-[40%]">
             <div
               style="background-image: url(./src/assets/images/band1.jpg)"
               class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
             ></div>
-            <h5 class="mt-5">Corduroy Gary</h5>
-            <h6>1st July 9PM - Main Stage</h6>
+            <h5 class="mt-5">Jackie Chaston</h5>
+            <h6>1st July 6PM - Sage Stage</h6>
           </div>
           <div class="min-w-[80%] md:min-w-[40%]">
             <div
               style="background-image: url(./src/assets/images/band2.jpg)"
               class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
             ></div>
-            <h5 class="mt-5">Corduroy Gary</h5>
-            <h6>1st July 9PM - Main Stage</h6>
+            <h5 class="mt-5">Jennifer Connelly</h5>
+            <h6>1st July 7PM - Platform 9</h6>
           </div>
           <div class="min-w-[80%] md:min-w-[40%]">
             <div
               style="background-image: url(./src/assets/images/band3.jpg)"
               class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
             ></div>
-            <h5 class="mt-5">Corduroy Gary</h5>
-            <h6>1st July 9PM - Main Stage</h6>
+            <h5 class="mt-5">The Slimy Diamonds</h5>
+            <h6>1st July 8PM - Main Stage</h6>
           </div>
           <div class="min-w-[80%] md:min-w-[40%]">
             <div
@@ -231,26 +233,114 @@
               style="background-image: url(./src/assets/images/band5.jpg)"
               class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
             ></div>
-            <h5 class="mt-5">Corduroy Gary</h5>
-            <h6>1st July 9PM - Main Stage</h6>
+            <h5 class="mt-5">Huskur Manja</h5>
+            <h6>2nd July 5PM - Main Stage</h6>
           </div>
           <div class="min-w-[80%] md:min-w-[40%]">
             <div
               style="background-image: url(./src/assets/images/band6.jpg)"
               class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
             ></div>
-            <h5 class="mt-5">Corduroy Gary</h5>
-            <h6>1st July 9PM - Main Stage</h6>
+            <h5 class="mt-5">DJ Lakkamma</h5>
+            <h6>2nd July 8PM - Main Stage</h6>
           </div>
           <div class="min-w-[80%] md:min-w-[40%]">
             <div
               style="background-image: url(./src/assets/images/band7.jpg)"
               class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
             ></div>
-            <h5 class="mt-5">Corduroy Gary</h5>
-            <h6>1st July 9PM - Main Stage</h6>
+            <h5 class="mt-5">Nimbehuli Romba</h5>
+            <h6>2nd July 9PM - Platform 9</h6>
           </div>
         </div>
+        <h2 class="mt-20">Lineup</h2>
+        <p class="mt-4">
+          Follow the timetable and stage to ensure you don't miss your favourite
+          artists.
+        </p>
+        <div
+          class="relative mt-4 rounded-lg bg-zinc-800 px-2 py-4 text-zinc-200"
+        >
+          <div
+            class="absolute left-1/2 top-0 ml-[-8px] h-full w-4 rounded-full bg-gradient-to-b from-sky-900 via-cyan-900 to-teal-900"
+          >
+            <div class="sticky top-1/2">
+              <div class="relative h-4 w-4">
+                <div
+                  class="absolute h-4 w-4 animate-ping rounded-full bg-pink-500 opacity-75"
+                ></div>
+                <div class="relative h-4 w-4 rounded-full bg-rose-500"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <h4 class="my-4 rounded-lg bg-zinc-900 p-2 text-center">1st July</h4>
+            </div>
+            <div></div>
+            <div class="text-right">
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6PM - Sage Stage</div>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <div class="font-bold">Jennifer Connelly</div>
+              <div class="text-zinc-400">7PM - Platform 9</div>
+            </div>
+            <div class="text-right">
+              <div class="font-bold">The Slimy Diamonds</div>
+              <div class="text-zinc-400">8PM - Main Stage</div>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <div class="font-bold">Corduray Gary</div>
+              <div class="text-zinc-400">9PM - Main Stage</div>
+            </div>
+            <div>
+              <h4 class="my-4 rounded-lg bg-zinc-900 p-2 text-center">2nd July</h4>
+            </div>
+            <div></div>
+            <div class="text-right">
+              <div class="font-bold">Huskur Manja</div>
+              <div class="text-zinc-400">5PM - Main Stage</div>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <div class="font-bold">DJ Lakkamma</div>
+              <div class="text-zinc-400">8PM - Main Stage</div>
+            </div>
+            <div class="text-right">
+              <div class="font-bold">Nimbehuli Romba</div>
+              <div class="text-zinc-400">9PM - Platform 9</div>
+            </div>
+          </div>
+        </div>
+        <h2 class="mt-20">Tickets</h2>
+        <table class="mt-5 table w-full border-collapse border border-zinc-500">
+          <thead class="text-lg font-bold">
+            <td class="border border-zinc-500 p-3">Tickets</td>
+            <td class="border border-zinc-500 p-3">Price</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-zinc-500 px-3 py-2">
+                Single day ticket
+              </td>
+              <td class="border border-zinc-500 px-3 py-2">$30</td>
+            </tr>
+            <tr>
+              <td class="border border-zinc-500 px-3 py-2">7 day ticket</td>
+              <td class="border border-zinc-500 px-3 py-2">$100</td>
+            </tr>
+          </tbody>
+          <caption class="caption-bottom">
+            Once they're gone, they're gone!
+          </caption>
+        </table>
       </div>
     </main>
   </body>
